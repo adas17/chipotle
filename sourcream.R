@@ -1,3 +1,6 @@
+####Sahar Mozaffari
+####More sourcream or less? - On Chipotle tacos, burritos, and bowls.
+
 install.packages("ggplot2")
 install.packages("reshape2")
 library(ggplot2)
