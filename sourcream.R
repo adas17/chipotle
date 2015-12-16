@@ -28,4 +28,5 @@ ggplot(foods, aes(factor(Sourcream)))+ geom_bar(aes(fill=Type)) + scale_x_discre
 
 ##Type of meal with those sourcream or not
 food <- melt(foods, id="Type", measure="Sourcream")
-ggplot(food, aes(x=Type, fill=value))+geom_bar(stat="bin", position="dodge")
+ggplot(food, aes(x=Type, fill=value))+geom_bar(stat="bin", position="dodge")+labs(x = "Type of food")+ scale_fill_discrete("Sourcream or not?", 
++  breaks=c("FALSE", "TRUE"),   labels=c("No Sourcream", "Yes Sourcream"))
