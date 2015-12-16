@@ -24,7 +24,7 @@ foods <- cbind(foods, var)
 colnames(foods)[7] <- "Sourcream"
 
 ##Sour cream colored by type of meal
-ggplot(foods, aes(Sourcream))+ geom_bar(aes(fill=Type))
+ggplot(foods, aes(factor(Sourcream)))+ geom_bar(aes(fill=Type)) + scale_x_discrete(limits=c(FALSE, TRUE), labels=c("No Sourcream", "Sourcream")) + labs(x = "Sourcream or not?", title = "Sourcream at Chipotle")
 
 ##Type of meal with those sourcream or not
 food <- melt(foods, id="Type", measure="Sourcream")
