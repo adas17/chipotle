@@ -23,7 +23,9 @@ var <- grepl("Sour Cream", foods$choice_description)
 foods <- cbind(foods, var)
 colnames(foods)[7] <- "Sourcream"
 
+##Sour cream colored by type of meal
 ggplot(foods, aes(Sourcream))+ geom_bar(aes(fill=Type))
 
+##Type of meal with those sourcream or not
 food <- melt(foods, id="Type", measure="Sourcream")
 ggplot(food, aes(x=Type, fill=value))+geom_bar(stat="bin", position="dodge")
